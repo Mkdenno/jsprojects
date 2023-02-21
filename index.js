@@ -16,3 +16,17 @@ function rot13(str) {
   }
   
   console.log(rot13("SERR CVMMN!"));
+
+// Telephone Number Validator
+// Return true if the passed string looks like a valid US phone number.
+
+// The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers (refer to the tests below for other variants):
+
+  function telephoneCheck(str) {
+    // const re=/^(1 |1-)*(\d{3}|\(\d{3}\))[ -]{0,1}(\d{4}$)/g
+    const re=/^(1 |1)*(\d{3}|\(\d{3}\))[ -]{0,1}(\d{3})[ -]{0,1}(\d{4}$)/g;
+    return re.test(str);
+  }
+  
+  console.log(telephoneCheck("555-555-5555"));
+  console.log(telephoneCheck("1 (555) 555-5555"));
